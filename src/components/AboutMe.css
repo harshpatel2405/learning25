@@ -78,8 +78,8 @@
 .img-box{
     width : 400px;
     height:400px;
-    border:3px solid red;
-    background-color: #c5c2c2;
-    margin-right:100px;
+    /* border:3px solid red; */
+    /* background-color: #c5c2c2; */
+    /* margin-right:100px; */
     border-radius: 50%;
 }

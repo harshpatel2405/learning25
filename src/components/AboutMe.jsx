@@ -1,13 +1,14 @@
 import React from "react";
 import "./AboutMe.css";
 
+import profileImage from "../assets/profile-image.avif";
 const AboutMe = () => {
   return (
     <div class="about-me">
       <div className="profile-section">
         <h1>About Me</h1>
         <div class="img-box">
-          
+          <img src={profileImage} alt="demo" ></img>
         </div>
       </div>
 

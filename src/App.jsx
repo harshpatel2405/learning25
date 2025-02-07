@@ -1,6 +1,9 @@
 // import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
+import ArrayDemo1 from "./components/Array/ArrayDemo1";
+import ArrayDemo2 from "./components/Array/ArrayDemo2";
+import ArrayDemo3 from "./components/Array/ArrayDemo3";
 
 // import Content from "./components/Content";
 // import Footer from "./components/Footer";
@@ -127,7 +130,17 @@ function App() {
 
     <>
     <Navbar/>
-    <AboutMe/>
+    {/* <AboutMe/> */}
+
+    {/* <h1>Array Demo 1</h1>
+    <hr></hr>
+    <ArrayDemo1/>
+
+    <h1>Array Demo 2</h1><hr></hr>
+    <ArrayDemo2/> */}
+
+    <ArrayDemo3/>
+    
     </>
   );
 }
