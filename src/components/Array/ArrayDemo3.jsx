@@ -129,7 +129,10 @@ export default function ArrayDemo3() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Table 1 : Players</h1>
+      <h2>Table 1: Players</h2>
+      <p style={{ fontSize: "15px", color: "gray", marginBottom: "5px" }}>
+        (Players with age &gt; 35 are marked as "Retire Now!!")
+      </p>
       <table className="table table-striped table-hover table-bordered border-primary">
         <thead>
           <tr>
@@ -142,66 +145,70 @@ export default function ArrayDemo3() {
           </tr>
         </thead>
         <tbody>
-          {players.map((player) => {
-            return (
-              <tr>
-                <td>{player.id}</td>
-                <td>{player.name}</td>
-                <td>{player.age >= 35 ? "Retire Now!!" : player.age}</td>
-                <td>{player.score}</td>
-                <td>{player.gender}</td>
-                <td>{player.isActive == 0 ? "False" : "True"}</td>
-              </tr>
-            );
-          })}
-          <tr></tr>
+          {players.map((player) => (
+            <tr key={player.id}>
+              <td>{player.id}</td>
+              <td>{player.name}</td>
+              <td>{player.age >= 35 ? "Retire Now!!" : player.age}</td>
+              <td>{player.score}</td>
+              <td>{player.gender}</td>
+              <td>{player.isActive === 0 ? "False" : "True"}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
 
-      <h1>Table 2 : City</h1>
-      <table className="table table-success table-striped-columns">
+      <h2>Table 2: City</h2>
+      <p style={{ fontSize: "15px", color: "gray", marginBottom: "5px" }}>
+        (Population &gt; 200,000 is <span style={{ color: "red" }}>red</span>,
+        AQI &gt; 300 is
+        <span
+          style={{
+            color: "red",
+          }}
+        >
+          {" "}
+          red
+        </span>
+        , AQI &lt; 200 is <span style={{ color: "green" }}>green</span>)
+      </p>
+      <table className="table table-success table-striped-columns table-hover table-bordered border-primary">
         <thead>
           <tr>
             <th>Id</th>
-            <th>CityName</th>
+            <th>City Name</th>
             <th>Population</th>
             <th>AQI</th>
           </tr>
         </thead>
         <tbody>
-          {city.map((city) => {
-            return (
-              <tr>
-                <td>{city.id}</td>
-                <td>{city.cityName}</td>
-                <td
-                  style={{ color: city.Population > 200000 ? "red" : "green" }}
-                >
-                  {city.Population}
-                </td>
-
-                <td
-                  style={{
-                    color:
-                      city.AQI > 300
-                        ? "red"
-                        : city.AQI < 200
-                        ? "green"
-                        : "black",
-                  }}
-                >
-                  {city.AQI}
-                </td>
-              </tr>
-            );
-          })}
-          <tr></tr>
+          {city.map((city) => (
+            <tr key={city.id}>
+              <td>{city.id}</td>
+              <td>{city.cityName}</td>
+              <td style={{ color: city.Population > 200000 ? "red" : "green" }}>
+                {city.Population}
+              </td>
+              <td
+                style={{
+                  color:
+                    city.AQI > 300 ? "red" : city.AQI < 200 ? "green" : "black",
+                }}
+              >
+                {city.AQI}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
 
-
-      <h1>Table 3 : Sales Data</h1>
-      <table className="table table-dark table-hover">
+      {/* Table 3: Sales Data */}
+      <h2>Table 3: Sales Data</h2>
+      <p style={{ fontSize: "15px", color: "gray", marginBottom: "5px" }}>
+        (Profit &gt; 50% of sales is{" "}
+        <span style={{ color: "green" }}>green</span>)
+      </p>
+      <table className="table table-dark table-hover table-bordered border-primary">
         <thead>
           <tr>
             <th>Id</th>
@@ -212,37 +219,21 @@ export default function ArrayDemo3() {
           </tr>
         </thead>
         <tbody>
-          {salesData.map((salesData) => {
-            return (
-              <tr>
-                <td>{salesData.id}</td>
-                <td>{salesData.day}</td>
-                <td
-                  // style={{ color: salesData.Population > 200000 ? "red" : "green" }}
-                >
-                  {salesData.sales}
-                </td>
-
-                <td
-                  // style={{
-                  //   color:
-                  //     salesData.AQI > 300
-                  //       ? "red"
-                  //       : salesData.AQI < 200
-                  //       ? "green"
-                  //       : "black",
-                  // }}
-                >
-                  {salesData.discount}
-                </td>
-                <td style={{ color: (salesData.profit / salesData.sales) > 0.5 ? "green" : "black" }}>
-  {salesData.profit}
-</td>
-
-              </tr>
-            );
-          })}
-          <tr></tr>
+          {salesData.map((sales) => (
+            <tr key={sales.id}>
+              <td>{sales.id}</td>
+              <td>{sales.day}</td>
+              <td>{sales.sales}</td>
+              <td>{sales.discount}%</td>
+              <td
+                style={{
+                  color: sales.profit / sales.sales > 0.5 ? "green" : "black",
+                }}
+              >
+                {sales.profit}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
