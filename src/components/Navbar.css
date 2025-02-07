@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    /* position: relative; */
+    justify-content: space-between;
+    margin: 15px 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#F1F2C4;
+    box-shadow: 2px 3px 3px #D0D991;
+    background-color: #697368;
+    border: 1px solid #161D26;
+    padding: 5px;   
+    border-radius: 5px;
+}
+
+.nav-links a:hover{
+    font-size:21px;  
+    
+    box-shadow: 3px 5px 5px  #697368;  
+    transition:0.5s;    
+}
