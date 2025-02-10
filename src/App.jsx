@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import ArrayDemo1 from "./components/Array/ArrayDemo1";
 import ArrayDemo2 from "./components/Array/ArrayDemo2";
 import ArrayDemo3 from "./components/Array/ArrayDemo3";
+import UseStateDemo1 from "./components/UseState/UseStateDemo1";
+import UseStateDemo2 from "./components/UseState/UseStateDemo2";
+import InputDemo1 from "./components/UseState/InputDemo1";
 
 // import Content from "./components/Content";
 // import Footer from "./components/Footer";
@@ -129,18 +132,23 @@ function App() {
     // </>
 
     <>
-    <Navbar/>
-    {/* <AboutMe/> */}
+      <Navbar />
+      {/* <AboutMe/> */}
 
-    {/* <h1>Array Demo 1</h1>
+      {/* <h1>Array Demo 1</h1>
     <hr></hr>
     <ArrayDemo1/>
 
     <h1>Array Demo 2</h1><hr></hr>
     <ArrayDemo2/> */}
 
-    <ArrayDemo3/>
-    
+      {/* <ArrayDemo3/> */}
+      <h1 style={{ textAlign: "center", marginBottom: "30px" }}>Use State</h1>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <UseStateDemo1 />
+        {/* <UseStateDemo2/> */}
+        <InputDemo1 />
+      </div>
     </>
   );
 }
