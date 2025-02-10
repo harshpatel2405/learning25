@@ -5,7 +5,7 @@ export default function ArrayDemo3() {
     {
       id: 1,
       name: "Virat Kohli",
-      age: 20,
+      age: 35,
       score: 12500,
       gender: "male",
       isActive: 1,
@@ -20,29 +20,54 @@ export default function ArrayDemo3() {
     },
     {
       id: 3,
-      name: "Sachin Tendulkar",
-      age: 50,
-      score: 18426,
-      gender: "male",
-      isActive: 0,
+      name: "Smriti Mandhana",
+      age: 27,
+      score: 4200,
+      gender: "female",
+      isActive: 1,
     },
     {
       id: 4,
-      name: "MS Dhoni",
-      age: 42,
-      score: 10500,
-      gender: "male",
-      isActive: 0,
+      name: "Harmanpreet Kaur",
+      age: 34,
+      score: 5000,
+      gender: "female",
+      isActive: 1,
     },
     {
       id: 5,
-      name: "Kapil Dev",
-      age: 65,
-      score: 9031,
+      name: "Steve Smith",
+      age: 34,
+      score: 9500,
       gender: "male",
-      isActive: 0,
+      isActive: 1,
+    },
+    {
+      id: 6,
+      name: "Ellyse Perry",
+      age: 33,
+      score: 7000,
+      gender: "female",
+      isActive: 1,
+    },
+    {
+      id: 7,
+      name: "Shubman Gill",
+      age: 24,
+      score: 2800,
+      gender: "male",
+      isActive: 1,
+    },
+    {
+      id: 8,
+      name: "Beth Mooney",
+      age: 30,
+      score: 3500,
+      gender: "female",
+      isActive: 1,
     },
   ];
+  
 
   let city = [
     {
@@ -186,13 +211,13 @@ export default function ArrayDemo3() {
             <tr key={city.id}>
               <td>{city.id}</td>
               <td>{city.cityName}</td>
-              <td style={{ color: city.Population > 200000 ? "red" : "green" }}>
+              <td style={{ backgroundColor: city.Population > 200000 ? "red" : "" }}>
                 {city.Population}
               </td>
               <td
                 style={{
-                  color:
-                    city.AQI > 300 ? "red" : city.AQI < 200 ? "green" : "black",
+                  backgroundColor:
+                    city.AQI > 300 ? "red" : city.AQI < 200 ? "green" : "",
                 }}
               >
                 {city.AQI}
@@ -206,7 +231,7 @@ export default function ArrayDemo3() {
       <h2>Table 3: Sales Data</h2>
       <p style={{ fontSize: "15px", color: "gray", marginBottom: "5px" }}>
         (Profit &gt; 50% of sales is{" "}
-        <span style={{ color: "green" }}>green</span>)
+        <span style={{ backgroundColor: "green" }}>green</span>)
       </p>
       <table className="table table-dark table-hover table-bordered border-primary">
         <thead>
@@ -227,7 +252,7 @@ export default function ArrayDemo3() {
               <td>{sales.discount}%</td>
               <td
                 style={{
-                  color: sales.profit / sales.sales > 0.5 ? "green" : "black",
+                  backgroundColor: sales.profit / sales.sales > 0.5 ? "green" : "black",
                 }}
               >
                 {sales.profit}
