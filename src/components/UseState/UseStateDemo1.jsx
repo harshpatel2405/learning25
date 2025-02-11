@@ -1,11 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React,{ useState } from "react";
+
 
 const UseStateDemo1 = () => {
   const [count, setCount] = useState(0);
 
   function increase() {
-    setCount(count + 1);
+    setCount(count+1);
   }
 
   function decrease() {

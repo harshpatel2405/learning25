@@ -1,12 +1,19 @@
 // import "./App.css";
-import AboutMe from "./components/AboutMe";
-import Navbar from "./components/Navbar";
-import ArrayDemo1 from "./components/Array/ArrayDemo1";
-import ArrayDemo2 from "./components/Array/ArrayDemo2";
-import ArrayDemo3 from "./components/Array/ArrayDemo3";
-import UseStateDemo1 from "./components/UseState/UseStateDemo1";
-import UseStateDemo2 from "./components/UseState/UseStateDemo2";
-import InputDemo1 from "./components/UseState/InputDemo1";
+import { Route, Routes } from "react-router-dom";
+// import AboutMe from "./components/Common/AboutMe";
+// import Navbar from "./components/Common/Navbar";
+// import ArrayDemo1 from "./components/Array/ArrayDemo1";
+// import ArrayDemo2 from "./components/Array/ArrayDemo2";
+// import ArrayDemo3 from "./components/Array/ArrayDemo3";
+// import UseStateDemo1 from "./components/UseState/UseStateDemo1";
+// import UseStateDemo2 from "./components/UseState/UseStateDemo2";
+// import InputDemo1 from "./components/UseState/InputDemo1";
+import Navbar from './components/routing/Navbarr'
+import HotstarHome from './components/routing/HotstartHome';
+import Hotstarmovies from './components/routing/HotstarMovies';
+import HotstarProfile from './components/routing/HotstarProfile';
+import HotstarSports from './components/routing/HotstartSports';
+import NotFoundPage from "./components/Common/NotFoundPage";
 
 // import Content from "./components/Content";
 // import Footer from "./components/Footer";
@@ -131,24 +138,37 @@ function App() {
     //   <Footer />
     // </>
 
+    // <>
+    //   <Navbar />
+    //   {/* <AboutMe/> */}
+
+    //   {/* <h1>Array Demo 1</h1>
+    // <hr></hr>
+    // <ArrayDemo1/>
+
+    // <h1>Array Demo 2</h1><hr></hr>
+    // <ArrayDemo2/> */}
+
+    //   {/* <ArrayDemo3/> */}
+    //   <h1 style={{ textAlign: "center", marginBottom: "30px" }}>Use State</h1>
+    //   <div style={{ display: "flex", justifyContent: "space-around" }}>
+    //     <UseStateDemo1 />
+    //     {/* <UseStateDemo2/> */}
+    //     <InputDemo1 />
+    //   </div>
+    // </>
+
     <>
-      <Navbar />
-      {/* <AboutMe/> */}
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<HotstarHome/>}/>
+        <Route path='/sports' element={<HotstarSports/>}/>
+        <Route path='/movies' element={<Hotstarmovies/>}/>
+        <Route path='/profile' element={<HotstarProfile/>}/>
+        <Route path='/*' element={<NotFoundPage/>}/>
 
-      {/* <h1>Array Demo 1</h1>
-    <hr></hr>
-    <ArrayDemo1/>
-
-    <h1>Array Demo 2</h1><hr></hr>
-    <ArrayDemo2/> */}
-
-      {/* <ArrayDemo3/> */}
-      <h1 style={{ textAlign: "center", marginBottom: "30px" }}>Use State</h1>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <UseStateDemo1 />
-        {/* <UseStateDemo2/> */}
-        <InputDemo1 />
-      </div>
+      
+      </Routes>
     </>
   );
 }

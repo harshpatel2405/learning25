@@ -31,7 +31,7 @@ const InputDemo1 = () => {
         <thead>
           <tr>
             <td>
-              <label  >First Name </label>{" "}
+              <label>First Name </label>{" "}
             </td>
             <td>
               <input
@@ -45,7 +45,7 @@ const InputDemo1 = () => {
           </tr>
           <tr>
             <td>
-              <label >Last Name</label>
+              <label>Last Name</label>
             </td>
             <td>
               <input
@@ -60,7 +60,7 @@ const InputDemo1 = () => {
 
           <tr>
             <td>
-              <label >Email</label>{" "}
+              <label>Email</label>{" "}
             </td>
             <td>
               <input
@@ -75,7 +75,7 @@ const InputDemo1 = () => {
 
           <tr>
             <td>
-              <label >Number</label>
+              <label>Number</label>
             </td>
             <td>
               <input
@@ -90,9 +90,9 @@ const InputDemo1 = () => {
 
           <tr>
             <td>
-              <label style={{marginRight:"60px"}}>Date</label>
+              <label style={{ marginRight: "60px" }}>Date</label>
             </td>
-            <td style={{padding:"10px"}}>
+            <td>
               <input
                 type="date"
                 placeholder="Enter Date"
@@ -106,11 +106,15 @@ const InputDemo1 = () => {
       </table>
       <br></br>
       <h1>Values</h1>
-      <p style={{fontSize:"20px",fontWeight:"bold"}}>First Name : {fname}</p>
-      <p style={{fontSize:"20px",fontWeight:"bold"}}>Last Name : {lname}</p>
-      <p style={{fontSize:"20px",fontWeight:"bold"}}>Email: {email}</p>
-      <p style={{fontSize:"20px",fontWeight:"bold"}}>Number : {phone}</p>
-      <p style={{fontSize:"20px",fontWeight:"bold"}}>Date : {tdate}</p>
+      <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+        First Name : {fname}
+      </p>
+      <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+        Last Name : {lname}
+      </p>
+      <p style={{ fontSize: "20px", fontWeight: "bold" }}>Email: {email}</p>
+      <p style={{ fontSize: "20px", fontWeight: "bold" }}>Number : {phone}</p>
+      <p style={{ fontSize: "20px", fontWeight: "bold" }}>Date : {tdate}</p>
     </div>
   );
 };

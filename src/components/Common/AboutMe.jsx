@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
 
-import profileImage from "../assets/profile-image.avif";
+import profileImage from "../../assets/profile-image.avif";
 const AboutMe = () => {
   return (
     <div class="about-me">
